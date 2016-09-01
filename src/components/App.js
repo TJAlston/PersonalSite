@@ -6,6 +6,7 @@ class App extends React.Component {
 
   render () {
     return <div>
+    <header>
       <h1>TJ Alston</h1>
       <nav>
         <ul>
@@ -15,9 +16,8 @@ class App extends React.Component {
           <li><Link to='/Portfolio'>Portfolio</Link></li>
         </ul>
       </nav>
-      <main>
-      <Home />
-      </main>
+    </header>
+    <Home />
     </div>
   }
 }
