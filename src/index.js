@@ -10,7 +10,7 @@ import {
   Portfolio
 } from './components'
 
-import './screen.sass'
+import './styles/screen.sass'
 
 render((
   <Router history={browserHistory}>

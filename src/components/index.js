@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-
-ReactDOM.render(<App />, document.getElementById('root'))
+export App from './App'
+export Home from './Home'
+export Resume from './Resume'
+export Portfolio from './Portfolio'
+export AboutMe from './AboutMe'
