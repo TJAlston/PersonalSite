@@ -1,5 +1,24 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import { render } from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import {
+  App,
+  Home,
+  Resume,
+  AboutMe,
+  Portfolio
+} from './components'
+
+import './screen.sass'
+
+render((
+  <Router history={browserHistory}>
+    <Route component={App}>
+      <Route path='/' component={Home} />
+      <Route path='/Resume' component={Resume} />
+      <Route path='/AboutMe' component={AboutMe} />
+      <Route path='/Portfolio' component={Portfolio} />
+    </Route>
+  </Router>
+), document.getElementById('root'))

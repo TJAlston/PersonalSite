@@ -1,6 +1,6 @@
 import React from 'react'
-import './style.sass'
 import { Link } from 'react-router'
+import './style.sass'
 import Home from './Home'
 
 class App extends React.Component {
@@ -16,7 +16,9 @@ class App extends React.Component {
           <li><Link to='/Portfolio'>Portfolio</Link></li>
         </ul>
       </nav>
+      <main>
       <Home />
+      </main>
     </div>
   }
 }
