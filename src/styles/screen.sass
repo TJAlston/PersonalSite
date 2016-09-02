@@ -1,8 +1,12 @@
+@mixin linx ($link, $visit, $hover, $active)
+$secondary-font-family: 'Yellowtail', cursive
+
 body
   color: black
-  overflow: hidden
-  background-image: url('http://il6.picdn.net/shutterstock/videos/11498153/thumb/1.jpg')
+  background-image: url('https://img1.etsystatic.com/045/0/8808358/il_fullxfull.708176001_ovmc.jpg')
   background-size: cover
+  padding-left: 150px
+  padding-right: 150px
 
 h1
     margin: 0
@@ -13,27 +17,32 @@ h1
     text-transform: uppercase
     text-align: center
 
+nav
+    border-bottom: 3px solid blue
+    padding-left: 100px
+    padding-right: 100px
+    padding-bottom: 5px
+    width: 65vw
+
 nav ul
   align-self: center
-  font-size: 20px
-  text-transform: uppercase
+  font-family: $secondary-font-family
+  font-size: 30px
   text-shadow: 2px 2px 5px grey
-  padding-left: 20px
-  padding-right: 20px
-  padding-bottom: 5px
   color: blue
   display: flex
   flex: auto
   list-style: none
-  margin-left: 50px
-  justify-content: space-between
   height: 20px
-  width:  90vw
-  border-bottom: 2px solid blue
+  justify-content: space-between
 
 h2
-  text-transform: uppercase
-  font-size: 20px
+  font-family: $secondary-font-family
+  font-size: 40px
+  font-weight: lighter
+  color: blue
+  text-shadow: 2px 2px black
+  letter-spacing: 1px
 
 .homeP
   display: flex
@@ -42,10 +51,9 @@ h2
 
 
 main
+  flex-wrap: wrap
   display: flex
-  margin-top: 50px
-  padding-left: 150px
-  padding-right: 150px
+  // margin-top: 50px
   flex-direction: column
   columns: 2
 

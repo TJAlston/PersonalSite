@@ -16,8 +16,8 @@ render((
   <Router history={browserHistory}>
     <Route component={App}>
       <Route path='/' component={Home} />
-      <Route path='/Resume' component={Resume} />
       <Route path='/AboutMe' component={AboutMe} />
+      <Route path='/Resume' component={Resume} />
       <Route path='/Portfolio' component={Portfolio} />
     </Route>
   </Router>

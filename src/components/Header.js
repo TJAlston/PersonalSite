@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 import { Link } from 'react-router'
 
-class Header extends Component
+class Header extends Component {
 
-  render (){
+  render () {
     return <div>
-      <nav>
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/Aboutme'>About Me</Link></li>
-          <li><Link to='/Resume'>Resume</Link></li>
-          <li><Link to='/Portfolio'>Portfolio</Link></li>
-        </ul>
-      </nav>
+        <h1>TJ Alston</h1>
+        <nav>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/AboutMe'>About Me</Link></li>
+            <li><Link to='/Resume'>Resume</Link></li>
+            <li><Link to='/Portfolio'>Portfolio</Link></li>
+          </ul>
+        </nav>
     </div>
   }
-
+}
 export default Header
