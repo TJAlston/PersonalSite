@@ -1,21 +1,25 @@
 @mixin linx ($link, $visit, $hover, $active)
+$base-font-family: 'Syncopate', sans-serif
 $secondary-font-family: 'Yellowtail', cursive
+$font-stack: 'Exo', sans-serif
 
 body
   color: black
   background-image: url('https://img1.etsystatic.com/045/0/8808358/il_fullxfull.708176001_ovmc.jpg')
   background-size: cover
   padding-left: 150px
-  padding-right: 150px
 
 h1
     margin: 0
     padding: 0
+    font-family: $base-font-family
     font-size: 80px
+    font-weight: bold
     text-shadow: 5px 5px 10px blue
     color: white
     text-transform: uppercase
     text-align: center
+    width: 75vw
 
 nav
     border-bottom: 3px solid blue
@@ -23,10 +27,11 @@ nav
     padding-right: 100px
     padding-bottom: 5px
     width: 65vw
+    margin-bottom: 50px
 
 nav ul
   align-self: center
-  font-family: $secondary-font-family
+  font-family: $base-font-family
   font-size: 30px
   text-shadow: 2px 2px 5px grey
   color: blue
@@ -36,6 +41,7 @@ nav ul
   height: 20px
   justify-content: space-between
 
+
 h2
   font-family: $secondary-font-family
   font-size: 40px
@@ -44,26 +50,62 @@ h2
   text-shadow: 2px 2px black
   letter-spacing: 1px
 
+.page1
+    margin-top: -50px
+
 .homeP
   display: flex
   justify-content: flex-start
-  width: 500px
-
+  width: 600px
+  padding-right: 100px
+  font-family: $font-stack
+  font-size: 25px
+  font-style: italic
 
 main
-  flex-wrap: wrap
   display: flex
-  // margin-top: 50px
-  flex-direction: column
-  columns: 2
+  width: 80vw
 
 .HS1
   display: flex
-  align-self: flex-end
-  margin-top: -280px
+  align-items: flex-end
   background-image: url('/src/Headshot2.jpg')
   background-size: cover
   height: 500px
   width: 350px
-  border: 2px solid blue
-  box-shadow: 2px 2px 2px grey
+  border: 3px solid blue
+  box-shadow: 3px 3px 10px black
+
+.about
+  display: flex
+  width: 80vw
+  margin-bottom: 20px
+  font-size: 20px
+  font-family: $font-stack
+
+.homeA
+  display: flex
+  justify-content: flex-end
+  font-size: 20px
+  font-family: $font-stack
+  width: 600px
+
+.newhaven
+  background-image: url('http://oiss.yale.edu/sites/default/files/event-images/new_haven.jpg')
+  display: flex
+  height: 345px
+  width: 525px
+  border: 3px solid blue
+  box-shadow: 3px 3px 10px black
+  margin-right: 20px
+
+
+.coop
+  display: flex
+  justify-content: flex-end
+  background-image: url('http://pcpa.imgix.net/pcpa_assets/2014/03/cooperative-arts-humanities-high-school-wall.jpg?w=1600&h=1100')
+  background-size: cover
+  height: 400px
+  width: 550px
+  border: 3px solid blue
+  box-shadow: 3px 3px 10px black
