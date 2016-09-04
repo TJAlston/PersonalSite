@@ -6,6 +6,7 @@ class Header extends Component {
   render () {
     return <div>
         <h1>TJ Alston</h1>
+        {this.props.children}
         <nav>
           <ul>
             <li><Link to='/Home'>Home</Link></li>
