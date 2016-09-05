@@ -4,7 +4,7 @@ import Home from './Home'
 import Header from './Header'
 import AboutMe from './AboutMe'
 import Resume from './Resume'
-// import Portfolio from './Portfolio'
+import Portfolio from './Portfolio'
 
 class App extends React.Component {
 
@@ -14,7 +14,7 @@ class App extends React.Component {
     <Home />
     <AboutMe />
     <Resume />
-    {/* <Portfolio /> */}
+    <Portfolio />
     </div>
   }
 }

@@ -3,11 +3,20 @@ $base-font-family: 'Syncopate', sans-serif
 $secondary-font-family: 'Yellowtail', cursive
 $font-stack: 'Exo', sans-serif
 
+$primary-color: rgba(50, 76, 251, 0.89)
+
+@mixin borderColors($width: 5px)
+  border-top: $width solid rgb(142, 66, 240)
+  border-bottom: $width solid rgb(44, 80, 189)
+  border-left: $width solid rgb(178, 92, 218)
+  border-right: $width solid rgb(45, 29, 223)
+
 body
   color: black
-  background-image: url('https://img1.etsystatic.com/045/0/8808358/il_fullxfull.708176001_ovmc.jpg')
+  background-image: url('http://wallup.net/wp-content/uploads/2016/01/164724-abstract-3D-lines-white-bright-digital_art-artwork.png')
   background-size: cover
   padding-left: 150px
+  height: 100vh
 
 h1
     margin: 0
@@ -22,36 +31,61 @@ h1
     width: 75vw
 
 nav
-    border-bottom: 3px solid blue
+    @include borderColors
     padding-left: 100px
     padding-right: 100px
     padding-bottom: 5px
     width: 65vw
     margin-bottom: 50px
-
-nav ul
-  align-self: center
-  font-family: $base-font-family
-  font-size: 30px
-  text-shadow: 2px 2px 5px grey
-  color: blue
-  display: flex
-  flex: auto
-  list-style: none
-  height: 20px
-  justify-content: space-between
+    ul
+      align-self: center
+      font-family: $base-font-family
+      font-size: 30px
+      text-shadow: 2px 2px 5px grey
+      color: $primary-color
+      display: flex
+      flex: auto
+      list-style: none
+      height: 20px
+      justify-content: space-between
 
 
 h2
   font-family: $secondary-font-family
   font-size: 40px
   font-weight: lighter
-  color: blue
+  color: $primary-color
   text-shadow: 2px 2px black
   letter-spacing: 1px
+  height: 150px
+  width: 700px
 
-.page1
-    margin-top: -50px
+.Home
+  margin-top: -50px
+  padding-bottom: 50px
+
+.homeMain
+  display: flex
+  justify-content: flex-start
+  width: 600px
+  height: 300px
+  padding-right: 100px
+  font-family: $font-stack
+  font-size: 20px
+  font-style: italic
+  align-items: center
+  text-shadow: 5px 5px 10px solid black
+
+.HS1
+  display: flex
+  align-items: flex-end
+  background-image: url('/src/Headshot2.jpg')
+  background-size: cover
+  height: 500px
+  width: 350px
+  @include borderColors
+  box-shadow: 3px 3px 10px black
+  margin-top: -150px
 
 .homeA
   display: flex
@@ -75,17 +109,9 @@ h2
 
 main
   display: flex
+  flex-direction: column
   width: 80vw
 
-.HS1
-  display: flex
-  align-items: flex-end
-  background-image: url('/src/Headshot2.jpg')
-  background-size: cover
-  height: 500px
-  width: 350px
-  border: 3px solid blue
-  box-shadow: 3px 3px 10px black
 
 .about
   display: flex
@@ -99,7 +125,7 @@ main
   display: flex
   height: 345px
   width: 525px
-  border: 3px solid blue
+  border: 3px solid $primary-color
   box-shadow: 3px 3px 10px black
   margin-right: 50px
 
@@ -111,7 +137,7 @@ main
   background-size: cover
   height: 400px
   width: 550px
-  border: 3px solid blue
+  border: 3px solid $primary-color
   box-shadow: 3px 3px 10px black
 
 .uncw
@@ -121,7 +147,7 @@ main
   background-size: cover
   height: 400px
   width: 550px
-  border: 3px solid blue
+  border: 3px solid $primary-color
   box-shadow: 3px 3px 10px black
   margin-right: 50px
 
@@ -130,7 +156,7 @@ main
   background-size: cover
   height: 450px
   width: 350px
-  border: 3px solid blue
+  border: 3px solid $primary-color
   box-shadow: 3px 3px 10px black
   margin-right: 50px
 
@@ -138,7 +164,7 @@ main
 iframe
   display: flex
   justify-content: flex-end
-  border: 3px solid blue
+  border: 3px solid $primary-color
   box-shadow: 3px 3px 10px black
 
 .Res

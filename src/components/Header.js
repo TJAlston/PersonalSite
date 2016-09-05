@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 class Header extends Component {
 
   render () {
-    return <div>
+    // const { children } = this.props
+    return <div className='Header'>
         <h1>TJ Alston</h1>
-        {this.props.children}
         <nav>
           <ul>
             <li><Link to='/Home'>Home</Link></li>
@@ -15,6 +15,9 @@ class Header extends Component {
             <li><Link to='/Portfolio'>Portfolio</Link></li>
           </ul>
         </nav>
+        <main>
+          {/* {this.props.children} */}
+        </main>
     </div>
   }
 }

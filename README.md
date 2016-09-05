@@ -1,20 +1,5 @@
-# App App.
+#Testing Site of My Portfolio
 
-The Boilerplate.
+A rough dummy page to work on previous assignments bundles into one project.
 
-## How do you use this?
-
-```
-git clone git@github.com:tiy-tpa-fee/app-app.git my-project-name
-cd my-project-name
-
-trash .git
-
-npm install
-
-git init
-
-// Do your thing...
-```
-# PersonalSite
-# PersonalSite
+Will attempt to conquer React, Sass, Mixins, API, and localstorage.

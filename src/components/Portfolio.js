@@ -30,14 +30,14 @@ class Portfolio extends Component {
          <div className='Website'> http://tjalston82.blogspot.com </div>
          <div className='JoinDate'> Joined on Jul 18, 2016 </div>
          </div>
-          <p>FOLLOWERS</p>
+          {/* <p>FOLLOWERS</p> */}
         {/* <Followers url={this.state.userData.followers_url} />
           <p>FOLLOWING</p>
         <Following url={this.state.userData.following_url} />
           <p>ORGANIZATIONS</p>
         <Organizations url={this.state.userData.organizations_url} /> */}
-          {/* </div>
-        <Repositories url={this.state.userData.repos_url} /> */}
+          {/* </div> */}
+        {/* <Repositories url={this.state.userData.repos_url} /> */}
       </div>
       </div>
     }

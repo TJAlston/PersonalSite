@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import {
   App,
@@ -12,14 +12,13 @@ import {
 
 import './styles/screen.sass'
 
-render((
+const router = (
   <Router history={browserHistory}>
-    <Route component={App}>
       <Route path='/' component={App} />
-      <Route path='/Home' component={Home} />
+      <IndexRoute component={Home}></IndexRoute>
       <Route path='/AboutMe' component={AboutMe} />
       <Route path='/Resume' component={Resume} />
       <Route path='/Portfolio' component={Portfolio} />
-    </Route>
   </Router>
-), document.getElementById('root'))
+)
+render(router, document.getElementById('root'))
