@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import Header from './Header'
 
 class Home extends Component {
 
   render () {
     return <div>
+    <Header />
     <main>
       <div className='Home'>
       <h2>Web Developer and Graphic Designer</h2>

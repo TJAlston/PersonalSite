@@ -15,7 +15,8 @@ import './styles/screen.sass'
 const router = (
   <Router history={browserHistory}>
       <Route path='/' component={App} />
-      <IndexRoute component={Home}></IndexRoute>
+      <IndexRoute component={Home} />
+      <Route path='/Home' component={Home} />
       <Route path='/AboutMe' component={AboutMe} />
       <Route path='/Resume' component={Resume} />
       <Route path='/Portfolio' component={Portfolio} />

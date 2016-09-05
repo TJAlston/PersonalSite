@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from './Header'
 
 class Portfolio extends Component {
 
@@ -20,6 +21,7 @@ class Portfolio extends Component {
 
     render () {
       return <div className='App'>
+      <Header />
         <div className='Sidebar'>
         {/* <Avatar id={this.state.userData.id} /> */}
          <div className='Name'> TJ ALSTON </div>
