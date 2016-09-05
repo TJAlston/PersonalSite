@@ -6,7 +6,7 @@ class AboutMe extends Component {
     return <div>
     <Header />
       <main>
-        <h2>Some Tidbits About Me</h2>
+        <h2>About Me</h2>
         <div className='about'>
           <div className='newhaven' />
           <p className='homeA'> Born an raised in New Haven Connecticut, home to Yale University and known as the "Cultural Capital of Connecticut". I was always exposed to the arts when I was growing up. During my childhood I was always either in photography, video, dance, drawing, painting, choir or theatre. </p>

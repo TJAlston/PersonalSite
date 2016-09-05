@@ -6,6 +6,7 @@ class Resume extends Component {
   render () {
     return <div>
     <Header />
+    <main>
     <h2> Resume </h2>
       <div className='Res'>
       Employment
@@ -67,12 +68,12 @@ class Resume extends Component {
       <li> Slack </li>
       </ul>
 
-      <h3>Awards and Accolades Received </h3>
-      <h4>Dollar Thrifty Automotive Group</h4>
+      <h5>Awards and Accolades Received </h5>
+      <h5>Dollar Thrifty Automotive Group</h5>
       <ul>
       <li>Stellar Performance Award </li>
       </ul>
-      <h4>Enterprise Rental Car</h4>
+      <h5>Enterprise Rental Car</h5>
       <ul>
       <li>	Region's Highest Customer Service Award (5 Consecutive Months) </li>
       <li>	Most Improved Customer Service Award </li>
@@ -101,6 +102,7 @@ class Resume extends Component {
       </li>
       </ul>
       </div>
+    </main>  
   </div>
   }
 }

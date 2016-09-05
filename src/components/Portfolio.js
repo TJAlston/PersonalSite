@@ -22,6 +22,7 @@ class Portfolio extends Component {
     render () {
       return <div className='App'>
       <Header />
+      <h2>Portfolio</h2>
         <div className='Sidebar'>
         {/* <Avatar id={this.state.userData.id} /> */}
          <div className='Name'> TJ ALSTON </div>
