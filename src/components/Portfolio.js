@@ -1,48 +1,36 @@
 import React, { Component } from 'react'
-import Header from './Header'
+// import Header from './Header'
+import 'whatwg-fetch'
 
 class Portfolio extends Component {
 
     constructor () {
       super()
       this.state = {
-        user: 'TJAlston',
-        userData: {}
+        repositories: []
       }
     }
 
-    componentDidMount () {
-      fetch(`https://api.github.com/users/${this.state.user}?access_token=7b29e64a783cb6e2043f31721d72877e70c049c4`)
-        .then((resp) => { return resp.json() })
-        .then((data) => {
-          this.setState({ userData: data })
-        })
+    componentWillReceiveProps (nextProps) {
+      if (nextProps.url !== undefined) {
+        fetch(nextProps.url + '?access_token=7b29e64a783cb6e2043f31721d72877e70c049c4')
+          .then((resp) => {
+            return resp.json()
+          })
+          .then((data) => {
+            this.setState({ repositories: data })
+          })
+      }
     }
 
     render () {
-      return <div className='App'>
-      <Header />
-      <h2>Portfolio</h2>
-        <div className='Sidebar'>
-        {/* <Avatar id={this.state.userData.id} /> */}
-         <div className='Name'> TJ ALSTON </div>
-         <div className='Bio'> Front End Engineer Student </div>
-         <div className='Info'>
-         <div className='Location'> Tampa, Florida </div>
-         <div className='Email'> tjalston82@gmail.com </div>
-         <div className='Website'> http://tjalston82.blogspot.com </div>
-         <div className='JoinDate'> Joined on Jul 18, 2016 </div>
-         </div>
-          {/* <p>FOLLOWERS</p> */}
-        {/* <Followers url={this.state.userData.followers_url} />
-          <p>FOLLOWING</p>
-        <Following url={this.state.userData.following_url} />
-          <p>ORGANIZATIONS</p>
-        <Organizations url={this.state.userData.organizations_url} /> */}
-          {/* </div> */}
-        {/* <Repositories url={this.state.userData.repos_url} /> */}
-      </div>
-      </div>
+      const repositories = this.state.repositories.map((repositories) => {
+        return <li key={repositories.name}><a href={repositories.html_url}>{repositories.name}</a></li>
+      })
+
+      return <ul className='Repositories'>
+        {repositories}
+      </ul>
     }
   }
 

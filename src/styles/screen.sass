@@ -13,7 +13,7 @@ $primary-color: rgba(50, 76, 251, 0.89)
 
 body
   color: black
-  background-image: url('http://wallup.net/wp-content/uploads/2016/01/164724-abstract-3D-lines-white-bright-digital_art-artwork.png')
+  background-image: url('http://orig01.deviantart.net/2e6d/f/2015/322/d/0/empty_white_room_with_columns_and_windows_3d_illus_by_winampers_pro-d9h4qd4.jpg')
   background-size: cover
   background-repeat: no-repeat
   background-attachment: fixed
@@ -54,6 +54,7 @@ nav
 
 h2
   margin-top: -20px
+  margin-bottom: -10px
   font-family: $secondary-font-family
   font-size: 100px
   text-align: center
@@ -65,16 +66,17 @@ h2
 
 h3
    font-family: $secondary-font-family
-   font-size: 75px
+   font-size: 90px
    color: $primary-color
    text-shadow: 2px 2px black
    margin-bottom: -100px
+   margin-top: 5px
 
 h4
     margin: 0
     padding: 0
     text-decoration: none
-    margin-top: 300px
+    margin-top: 375px
     font-family: $base-font-family
     font-size: 100px
     font-weight: bold
@@ -90,8 +92,6 @@ h4
   padding-bottom: 50px
 
 .homeMain
-  display: flex
-  justify-content: flex-start
   width: 600px
   height: 300px
   padding-right: 100px
@@ -99,11 +99,12 @@ h4
   font-size: 20px
   font-style: italic
   align-items: center
+  margin-top: 100px
   text-shadow: 5px 5px 10px solid black
 
 .HS1
-  display: flex
-  align-items: flex-end
+  // display: flex
+  // align-items: flex-end
   background-image: url('/src/Headshot2.jpg')
   background-size: cover
   height: 500px
@@ -192,5 +193,6 @@ iframe
   box-shadow: 3px 3px 10px black
 
 .Res
+  @include borderColors
   padding: 10px
   background-color: white
