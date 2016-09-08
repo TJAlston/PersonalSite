@@ -5,6 +5,83 @@ $font-stack: 'Exo', sans-serif
 
 $primary-color: rgba(50, 76, 251, 0.89)
 
+@keyframes fadeInWithBounce
+  0%
+    opacity: 0
+    transform: scale(0.5)
+  50%
+    opacity: 1
+    transform: scale(1.0)
+
+$sprite-size: 35vw
+
+@keyframes fly
+  0%
+    background-position-x: -12vw
+    background-position-y: 0
+  20%
+    background-position-x: -25vw
+    background-position-y: 0
+  30%
+    background-position-x: -43vw
+    background-position-y: 0
+  40%
+    background-position-x: -55vw
+    background-position-y: 0
+  60%
+    background-position-x: -67vw
+    background-position-y: 0
+  80%
+    background-position-x: -79vw
+    background-position-y: 0
+  100%
+    background-position-x: -96vw
+    background-position-y: 0
+
+@keyframes comeInLeft
+  from
+    opacity: 1
+    transform: translate3d(100%, 0, 0)
+  to
+    opacity: 1
+    transform: none
+
+@keyframes bounceInDown
+  from, 60%, 75%, 90%, to
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+  0%
+    opacity: 0
+    transform: translate3d(0, -3000px, 0)
+  60%
+    opacity: 1
+    transform: translate3d(0, 25px, 0)
+  75%
+    transform: translate3d(0, -10px, 0)
+  90%
+    transform: translate3d(0, 5px, 0)
+  to
+    transform: none
+
+.dove
+    height: 25vh
+    width: 12vw
+    padding-left: 10px
+    background-image: url('/images/doveleft2.png')
+    background-repeat: no-repeat
+    background-size: $sprite-size*3
+    margin-left: 500px
+    animation-duration: 1s
+    animation-name: fly
+    animation-iteration-count: infinite
+    animation-timing-function: step-start
+
+.doveplacement
+    animation-name: comeInLeft
+    animation-duration: 10s
+    animation-iteration-count: 1
+    margin-bottom: -10px
+
+
 @mixin borderColors($width: 5px)
   border-top: $width solid rgb(142, 66, 240)
   border-bottom: $width solid rgb(44, 80, 189)
@@ -13,7 +90,8 @@ $primary-color: rgba(50, 76, 251, 0.89)
 
 body
   color: black
-  background-image: url('http://orig01.deviantart.net/2e6d/f/2015/322/d/0/empty_white_room_with_columns_and_windows_3d_illus_by_winampers_pro-d9h4qd4.jpg')
+  // background-image: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/cool-white-background-3.jpg')
+  background-color: white
   background-size: cover
   background-repeat: no-repeat
   background-attachment: fixed
@@ -31,6 +109,7 @@ h1
     text-transform: uppercase
     text-align: center
     width: 75vw
+
 
 nav
     @include borderColors
@@ -50,7 +129,6 @@ nav
       list-style: none
       height: 20px
       justify-content: space-between
-
 
 h2
   margin-top: -20px
@@ -75,21 +153,18 @@ h3
 h4
     margin: 0
     padding: 0
-    text-decoration: none
-    margin-top: 375px
+    margin-top: 350px
     font-family: $base-font-family
-    font-size: 100px
-    font-weight: bold
-    text-shadow: 5px 10px 10px blue
+    font-size: 125px
+    font-weight: bolder
+    text-shadow: 7px 10px 10px blue
     color: white
     text-transform: uppercase
     text-align: center
     width: 75vw
     height: 100vh
-
-.Home
-  margin-top: -50px
-  padding-bottom: 50px
+    animation: 7s fadeInWithBounce
+    position: fixed
 
 .homeMain
   width: 600px
@@ -103,8 +178,6 @@ h4
   text-shadow: 5px 5px 10px solid black
 
 .HS1
-  // display: flex
-  // align-items: flex-end
   background-image: url('/src/Headshot2.jpg')
   background-size: cover
   height: 500px
@@ -185,7 +258,6 @@ main
   box-shadow: 3px 3px 10px black
   margin-right: 50px
 
-
 iframe
   display: flex
   justify-content: flex-end
@@ -196,3 +268,5 @@ iframe
   @include borderColors
   padding: 10px
   background-color: white
+.noUnders
+  text-decoration: none

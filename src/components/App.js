@@ -6,13 +6,13 @@ import { Link } from 'react-router'
 class App extends React.Component {
 
   render () {
-    return <div>
-      <Link to='Home'>
+    return <div className='App'>
+      <Link className='noUnders' to='Home'>
       <h4>TJ Alston</h4></Link>
-
-    {/* <Header />
-    <Home /> */}
-    </div>
+      <div className='doveplacement'>
+        <div className='dove' />
+        </div>
+      </div>
   }
 }
 

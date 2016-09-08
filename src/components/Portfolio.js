@@ -28,9 +28,10 @@ class Portfolio extends Component {
         return <li key={repositories.name}><a href={repositories.html_url}>{repositories.name}</a></li>
       })
 
-      return <ul className='Repositories'>
-        {repositories}
-      </ul>
+      return
+      <div>
+      <Header />
+      </div>
     }
   }
 
