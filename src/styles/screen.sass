@@ -5,6 +5,15 @@ $font-stack: 'Exo', sans-serif
 
 $primary-color: rgba(50, 76, 251, 0.89)
 
+@keyframes comeInTop
+  from
+    opacity: 0
+    transform: translate3d(0, -100%, 0)
+  to
+    opacity: 1
+    transform: none
+
+
 @keyframes fadeInWithBounce
   0%
     opacity: 0
@@ -13,90 +22,16 @@ $primary-color: rgba(50, 76, 251, 0.89)
     opacity: 1
     transform: scale(1.0)
 
-$sprite-size: 35vw
-
-@keyframes fly
-  0%
-    background-position-x: -12vw
-    background-position-y: 0
-  20%
-    background-position-x: -25vw
-    background-position-y: 0
-  30%
-    background-position-x: -43vw
-    background-position-y: 0
-  40%
-    background-position-x: -55vw
-    background-position-y: 0
-  60%
-    background-position-x: -67vw
-    background-position-y: 0
-  80%
-    background-position-x: -79vw
-    background-position-y: 0
-  100%
-    background-position-x: -96vw
-    background-position-y: 0
-
-@keyframes comeInLeft
-  from
-    opacity: 1
-    transform: translate3d(100%, 0, 0)
-  to
-    opacity: 1
-    transform: none
-
-@keyframes bounceInDown
-  from, 60%, 75%, 90%, to
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
-  0%
-    opacity: 0
-    transform: translate3d(0, -3000px, 0)
-  60%
-    opacity: 1
-    transform: translate3d(0, 25px, 0)
-  75%
-    transform: translate3d(0, -10px, 0)
-  90%
-    transform: translate3d(0, 5px, 0)
-  to
-    transform: none
-
-.dove
-    height: 25vh
-    width: 12vw
-    padding-left: 10px
-    background-image: url('/images/doveleft2.png')
-    background-repeat: no-repeat
-    background-size: $sprite-size*3
-    margin-left: 500px
-    animation-duration: 1s
-    animation-name: fly
-    animation-iteration-count: infinite
-    animation-timing-function: step-start
-
-.doveplacement
-    animation-name: comeInLeft
-    animation-duration: 10s
-    animation-iteration-count: 1
-    margin-bottom: -10px
-
-
-@mixin borderColors($width: 5px)
-  border-top: $width solid rgb(142, 66, 240)
-  border-bottom: $width solid rgb(44, 80, 189)
-  border-left: $width solid rgb(178, 92, 218)
-  border-right: $width solid rgb(45, 29, 223)
-
 body
   color: black
-  // background-image: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/cool-white-background-3.jpg')
-  background-color: white
-  background-size: cover
-  background-repeat: no-repeat
-  background-attachment: fixed
-  padding-left: 150px
-  height: 100vh
+  overflow: hidden
+
+main
+  display: flex
+  flex-direction: column
+  padding-left: 100px
+  padding-right: 100px
+  margin-top: 100px
 
 h1
     margin: 0
@@ -109,26 +44,13 @@ h1
     text-transform: uppercase
     text-align: center
     width: 75vw
+    animation-name: fadeInWithBounce
+    animation-duration: 10s
+    animation-delay: 1.5s
+    animation-fill-mode: forwards
 
-
-nav
-    @include borderColors
-    padding-left: 100px
-    padding-right: 100px
-    padding-bottom: 5px
-    width: 65vw
-    margin-bottom: 50px
-    ul
-      align-self: center
-      font-family: $base-font-family
-      font-size: 30px
-      text-shadow: 2px 2px 5px grey
-      color: $primary-color
-      display: flex
-      flex: auto
-      list-style: none
-      height: 20px
-      justify-content: space-between
+.noUnders
+  text-decoration: none
 
 h2
   margin-top: -20px
@@ -153,7 +75,6 @@ h3
 h4
     margin: 0
     padding: 0
-    margin-top: 350px
     font-family: $base-font-family
     font-size: 125px
     font-weight: bolder
@@ -166,10 +87,47 @@ h4
     animation: 7s fadeInWithBounce
     position: fixed
 
+.App
+  display: flex
+  justify-content: center
+
+
+nav
+  display: flex
+  flex-wrap: wrap
+  top: 0
+  position: fixed
+  margin-left: -10px
+  width: 100vw
+  background-color: rgba(2, 4, 17, 0.25)
+  margin-bottom: 50px
+  border-bottom: 3px solid grey
+  animation-name: comeInTop
+  animation-duration: 5s
+  justify-content: center
+  padding: 5px
+  ul
+    display: flex
+    flex-wrap: wrap
+    width: 90vw
+    padding-right: 5vw
+    justify-content: center
+    align-self: center
+    font-family: $base-font-family
+    font-size: 1.75em
+    text-shadow: 2px 2px 2px white
+    color: white
+    display: flex
+    flex: auto
+    list-style: none
+    height: 20px
+    justify-content: space-between
+
+
 .homeMain
-  width: 600px
+  width: 100vw
   height: 300px
-  padding-right: 100px
+  // padding-right: 100px
   font-family: $font-stack
   font-size: 20px
   font-style: italic
@@ -180,9 +138,9 @@ h4
 .HS1
   background-image: url('/src/Headshot2.jpg')
   background-size: cover
+  background-position: center
   height: 500px
-  width: 350px
-  @include borderColors
+  width: 600px
   box-shadow: 3px 3px 10px black
 
 .homeA
@@ -205,11 +163,6 @@ h4
   font-style: italic
   align-items: center
 
-main
-  display: flex
-  flex-direction: column
-  width: 80vw
-
 
 .about
   display: flex
@@ -218,55 +171,63 @@ main
   font-size: 20px
   font-family: $font-stack
 
-.newhaven
-  @include borderColors
-  background-image: url('http://oiss.yale.edu/sites/default/files/event-images/new_haven.jpg')
-  display: flex
-  height: 345px
-  width: 525px
-  box-shadow: 3px 3px 10px black
-  margin-right: 50px
 
-
-.coop
-  @include borderColors
-  display: flex
-  justify-content: flex-end
-  background-image: url('http://pcpa.imgix.net/pcpa_assets/2014/03/cooperative-arts-humanities-high-school-wall.jpg?w=1600&h=1100')
-  background-size: cover
-  height: 400px
-  width: 550px
-  box-shadow: 3px 3px 10px black
-
-.uncw
-  @include borderColors
-  display: flex
-  justify-content: flex-end
-  background-image: url('http://www.vsba.com/wp-content/gallery/university-of-north-carolina-wilmington-fisher-student-center/UNCW-Fisher-Student-Center-01.jpg')
-  background-size: cover
-  height: 400px
-  width: 550px
-  box-shadow: 3px 3px 10px black
-  margin-right: 50px
-
-.sauls
-  background-image: url('https://s-media-cache-ak0.pinimg.com/236x/0c/a1/2c/0ca12cd076ff05ae4de6eaaaccadbd75.jpg')
-  background-size: cover
-  height: 450px
-  width: 350px
-  border: 3px solid $primary-color
-  box-shadow: 3px 3px 10px black
-  margin-right: 50px
-
-iframe
-  display: flex
-  justify-content: flex-end
-  border: 3px solid $primary-color
-  box-shadow: 3px 3px 10px black
-
-.Res
-  @include borderColors
-  padding: 10px
-  background-color: white
-.noUnders
-  text-decoration: none
+// @keyframes bounceInDown
+//   from, 60%, 75%, 90%, to
+//     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+//   0%
+//     opacity: 0
+//     transform: translate3d(0, -3000px, 0)
+//   60%
+//     opacity: 1
+//     transform: translate3d(0, 25px, 0)
+//   75%
+//     transform: translate3d(0, -10px, 0)
+//   90%
+//     transform: translate3d(0, 5px, 0)
+//   to
+//     transform: none
+//
+// .dove
+//     height: 25vh
+//     width: 12vw
+//     padding-left: 10px
+//     background-image: url('/images/doveleft2.png')
+//     background-repeat: no-repeat
+//     background-size: $sprite-size*3
+//     margin-left: 500px
+//     animation-duration: 1s
+//     animation-name: fly
+//     animation-iteration-count: infinite
+//     animation-timing-function: step-start
+//
+// .doveplacement
+//     animation-name: comeInLeft
+//     animation-duration: 10s
+//     animation-iteration-count: 1
+//     margin-bottom: -10px
+//
+// $sprite-size: 35vw
+//
+// @keyframes fly
+//   0%
+//     background-position-x: -12vw
+//     background-position-y: 0
+//   20%
+//     background-position-x: -25vw
+//     background-position-y: 0
+//   30%
+//     background-position-x: -43vw
+//     background-position-y: 0
+//   40%
+//     background-position-x: -55vw
+//     background-position-y: 0
+//   60%
+//     background-position-x: -67vw
+//     background-position-y: 0
+//   80%
+//     background-position-x: -79vw
+//     background-position-y: 0
+//   100%
+//     background-position-x: -96vw
+//     background-position-y: 0

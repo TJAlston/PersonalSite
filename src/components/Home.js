@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+// import { Link } from 'react-router'
 
 class Home extends Component {
 

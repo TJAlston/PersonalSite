@@ -1,5 +1,5 @@
 export App from './App'
 export Home from './Home'
-export Resume from './Resume'
+export Contact from './Contact'
 export Portfolio from './Portfolio'
 export AboutMe from './AboutMe'

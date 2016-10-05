@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import Header from './Header'
 import { Link } from 'react-router'
 
-class AboutMe extends Component {
+class Contact extends Component {
 
   render () {
-    return <div className='AboutMe'>
-    <Header />
+    return <div className='Contact'>
+      <Header/>
       </div>
   }
 }
 
-export default AboutMe
+export default Contact

@@ -6,8 +6,8 @@ import {
   App,
   Home,
   AboutMe,
-  Resume,
-  Portfolio
+  Portfolio,
+  Contact
 } from './components'
 
 import './styles/screen.sass'
@@ -17,7 +17,7 @@ const router = (
       <Route path='/' component={App} />
       <Route path='/Home' component={Home} />
       <Route path='/AboutMe' component={AboutMe} />
-      <Route path='/Resume' component={Resume} />
+      <Route path='/Contact' component={Contact} />
       <Route path='/Portfolio' component={Portfolio} />
   </Router>
 )
