@@ -13,6 +13,12 @@ $primary-color: rgba(50, 76, 251, 0.89)
     opacity: 1
     transform: none
 
+@keyframes fadeIn
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+
 
 @keyframes fadeInWithBounce
   0%
@@ -22,9 +28,18 @@ $primary-color: rgba(50, 76, 251, 0.89)
     opacity: 1
     transform: scale(1.0)
 
+@keyframes zoom
+    from
+      transform:scale(0)
+    to
+      transform:scale(1)
+
+@mixin borderColor
+  border: 3px solid grey
+
 body
   color: black
-  overflow: hidden
+  overflow-x: hidden
 
 main
   display: flex
@@ -49,9 +64,6 @@ h1
     animation-delay: 1.5s
     animation-fill-mode: forwards
 
-.noUnders
-  text-decoration: none
-
 h2
   margin-top: -20px
   margin-bottom: -10px
@@ -66,11 +78,9 @@ h2
 
 h3
    font-family: $secondary-font-family
-   font-size: 90px
+   font-size: 3em
    color: $primary-color
    text-shadow: 2px 2px black
-   margin-bottom: -100px
-   margin-top: 5px
 
 h4
     margin: 0
@@ -87,10 +97,12 @@ h4
     animation: 7s fadeInWithBounce
     position: fixed
 
-.App
-  display: flex
-  justify-content: center
+.Header
+  padding-top: 10px
 
+.title
+  justify-content: center
+  margin: 200px
 
 nav
   display: flex
@@ -106,6 +118,7 @@ nav
   animation-duration: 5s
   justify-content: center
   padding: 5px
+  position: absolute
   ul
     display: flex
     flex-wrap: wrap
@@ -123,54 +136,230 @@ nav
     height: 20px
     justify-content: space-between
 
+.noUnders
+  text-decoration: none
+
+//HOME
+.home
+  display: flex
+  flex-direction: row
+  animation-name: fadeIn
+  justify-content: space-between
+  margin-top: 100px
 
 .homeMain
-  width: 100vw
-  height: 300px
-  // padding-right: 100px
+  width: 500px
+  height: 200px
   font-family: $font-stack
   font-size: 20px
   font-style: italic
   align-items: center
-  margin-top: 100px
   text-shadow: 5px 5px 10px solid black
 
+.homeFont
+  font-size: 90px
+  margin-bottom: -20px
+  padding: 0
+
 .HS1
-  background-image: url('/src/Headshot2.jpg')
+  background-image: url('/images/Headshot2.jpg')
   background-size: cover
   background-position: center
-  height: 500px
-  width: 600px
+  height: 400px
+  width: 250px
+  margin-left: -20px
   box-shadow: 3px 3px 10px black
+  @include borderColor
 
-.homeA
+.homeDisplay
   display: flex
-  justify-content: flex-end
-  align-items: center
-  font-size: 20px
+  flex-direction: column
+  width: 500px
+  height: 300px
+  padding-top: -10px
+  text-align: center
+  justify-content: center
+  margin-right: -150px
+
+//Portfolio
+
+.Portfolio
+  display: flex
+  flex-wrap: wrap
+  margin-left: 150px
+  margin-right: 150px
+  margin-top: 50px
+  justify-content: center
+  text-align: center
+  justify-content: space-between
   font-family: $font-stack
-  width: 600px
-  font-style: italic
-  margin-right: 50px
+  font-size: 1em
 
-.homeP
+#web
+  @include borderColor
+
+#web:hover
+  background-color: rgba(11, 94, 153, .5)
+
+#graphic
+  @include borderColor
+
+#graphic:hover
+  @include borderColor
+
+
+.image1
+  text-decoration: none
+
+.image2
+  text-decoration: none
+
+.image3
+  text-decoration: none
+
+.image4
+  text-decoration: none
+
+.marvel
+  @include borderColor
+  margin-top: -25px
+
+.one
+  @include borderColor
+  margin-top: -25px
+
+.bomb
+  @include borderColor
+  margin-top: -25px
+
+.op
+  @include borderColor
+  margin-top: -25px
+
+
+//Contact
+
+.Headshot
   display: flex
-  justify-content: flex-start
-  width: 600px
-  padding-right: 100px
-  font-family: $font-stack
-  font-size: 20px
-  font-style: italic
-  align-items: center
+  flex-direction: row wrap
+  margin-left: 150px
+  margin-right: 150px
+  justify-content: space-between
+  font-family: $base-font-family
+  font-weight: bold
 
+#headshot
+  @include borderColor
+  margin-top: 100px
 
-.about
-  display: flex
-  width: 80vw
+#Contact
+  margin-top: -50px
   margin-bottom: 20px
-  font-size: 20px
-  font-family: $font-stack
 
+.contactMe
+  display: flex
+  padding: 0
+  flex-direction: column
+  margin-top: 100px
+  height: 400px
+  width: 400px
+  @include borderColor
+  justify-content: center
+  align-items: center
+
+.contactButton
+  border: 2px solid grey
+  border-radius: 3px
+  background-color: rgb(80, 128, 210)
+  color: white
+  text-decoration: none
+  text-align: center
+  padding-bottom: -20px
+  padding-top: 15px
+  margin-bottom: 20px
+  // justify-content: center
+  align-content: center
+  width: 150px
+  height: 30px
+
+//GRAPHIC DESIGN
+
+.graphics
+  margin-top: 100px
+  margin-left: 150px
+  margin-right: 150px
+
+.popeye
+  @include borderColor
+
+.zeta
+  @include borderColor
+
+.bubbles
+  @include borderColor
+
+.invite
+  @include borderColor
+
+.logo
+  @include borderColor
+
+.lefemme
+  @include borderColor
+
+#popeye
+  display: flex
+  flex-direction: column
+  text-align: center
+
+#zeta
+  display: flex
+  flex-direction: column
+  text-align: center
+
+#bubbles
+  display: flex
+  flex-direction: column
+  text-align: center
+
+#invite
+  display: flex
+  flex-direction: column
+  text-align: center
+
+#logo
+  display: flex
+  flex-direction: column
+  text-align: center
+
+#lefemme
+  display: flex
+  flex-direction: column
+  text-align: center
+
+
+.Row1
+  display: flex
+  flex-direction: column wrap
+  justify-content: space-between
+  margin-bottom: 10px
+
+.Row2
+  display: flex
+  flex-direction: column wrap
+  justify-content: space-between
+  padding-left: 50px
+  padding-right: 50px
+  margin-bottom: 10px
+
+.Row3
+  display: flex
+  flex-direction: column wrap
+  justify-content: space-between
+  margin-bottom: 10px
+
+// .popeye:hover
+//   opacity: 0.7
 
 // @keyframes bounceInDown
 //   from, 60%, 75%, 90%, to
