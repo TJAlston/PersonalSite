@@ -1,27 +1,45 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+'use strict'
+
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+
+const ROOT_PATH = path.resolve(__dirname)
+const SOURCE_PATH = path.resolve(ROOT_PATH, 'src')
+const BUILD_PATH = path.resolve(ROOT_PATH, 'build')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    SOURCE_PATH
+  ],
   output: {
     filename: 'bundle.js',
-    path: './build'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.(sass|scss)$/,
-        loaders: ['style', 'css', 'sass']
-      }
-    ]
+    path: BUILD_PATH
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
-  ]
+      template: path.resolve('index.html'),
+      inject: 'body',
+      filename: 'index.html'
+    }),
+    new DashboardPlugin()
+  ],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      include: [SOURCE_PATH],
+      loader: 'babel'
+    }, {
+      test: /\.(sass|scss)$/,
+      loaders: ['style', 'css', 'sass']
+    }, {
+      test: /\.json$/,
+      loader: 'json'
+    }, {
+      test: /\.(png|jpe?g|gif|svg|ttf|eot|otf|woff|woff2)$/,
+      loader: 'file'
+    }]
+  }
 }

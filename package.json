@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000"
+    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
+    "deploy": "surge ./build"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -23,6 +24,7 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
