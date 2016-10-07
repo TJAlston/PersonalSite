@@ -14,8 +14,8 @@ class App extends Component {
             <p className='homeMain'> Thank you for taking the time to view my page.  I am a Web Designer and Developer that has experience working with HTML, CSS, Javascript. I am also a recent graduate of The Iron Yard with a certification in Front-End Engineering.</p>
             </div>
             <div className='HS1' />
-      </main>
-    <Footer />
+        </main>
+      <Footer />
    </div>
   }
 }

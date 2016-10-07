@@ -1,4 +1,4 @@
-@mixin linx ($link, $visit, $hover, $active)
+// @mixin linx ($link, $visit, $hover, $active)
 $base-font-family: 'Syncopate', sans-serif
 $secondary-font-family: 'Yellowtail', cursive
 $font-stack: 'Exo', sans-serif
@@ -124,7 +124,7 @@ nav
   animation-name: comeInTop
   animation-duration: 5s
   justify-content: center
-  padding-top: 35px
+  padding-top: 20px
   position: absolute
   ul
     display: flex
@@ -150,8 +150,7 @@ nav
 .home
   display: flex
   flex-direction: row
-  // animation-name: fadeIn
-  margin-top: 150px
+  margin-top: 100px
   justify-content: center
   width: 75vw
   justify-content: space-between
@@ -159,9 +158,11 @@ nav
 .homeMain
   width: 500px
   height: 200px
-  font-family: $font-stack
+  font-family: $base-font-family
+  font-weight: bold
   font-size: 20px
   font-style: italic
+  line-height: 30px
   align-items: center
   text-shadow: 5px 5px 10px solid black
 
@@ -450,8 +451,8 @@ nav
   display: flex
   flex-direction: row
   align-items: center
-  margin-right: 10vw
-  padding-bottom: 20px
+  margin-right: 20vw
+  padding-bottom: 40px
 
 .footerFont
   padding: 0
