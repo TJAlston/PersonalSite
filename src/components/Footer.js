@@ -7,7 +7,7 @@ class Footer extends Component {
     return <div>
       <main id='footer'>
         <div className='buttons'>
-          <h3 className='footerFont'>Follow Me</h3>
+          <h3 className='footerFont'>Follow Me:</h3>
             <a href='https://www.linkedin.com/in/tamekajalston'>
             <div className='linkedIn' />
             </a>
@@ -21,10 +21,12 @@ class Footer extends Component {
             <div className='github' />
             </a>
         </div>
-          <div id='copyRight'>
-            <div className='copyright' />
-            <h3 className='footerFont'> Tameka J. Alston</h3>
-          </div>
+          <Link to='/Contact'>
+            <div id='copyRight'>
+              <div className='copyright' />
+              <h3 className='footerFont'> Tameka J. Alston</h3>
+            </div>
+          </Link>
       </main>
     </div>
   }

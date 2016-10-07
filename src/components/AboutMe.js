@@ -26,7 +26,7 @@ class AboutMe extends Component {
           <p className='homeA'> In June 2004, I received a Bachelor of Arts Degree in Communication & Media Studies as well as a minor in Theater at the University of North Carolina at Wilmington. During that time I had a plethora of achievements. With four other sorors we reactivated the Pi Nu Chapter of Zeta Phi Beta Sorority Incorporated which is still currently active. I also worked on the student television channel Studio 124 as a Technical Director and Set Designer. I also graduated with the honor of being on the Dean's List my last two consecutive years.</p>
          </div>
          <div className='step'>
-           <p className='homeP'> One of the proudest moments of my life was joining a competitive Step Team in Alexandria Virginia by the name of Z-Phi Dynasty. Not only did we get to perform in arenas in front of thousands of people in the Tri-State Area, we won countless shows and are known for being the very first step team to win BET's StepOff Challenge. </p>
+           <p className='homeP'> One of the proudest moments of my life was joining a competitive Step Team in Alexandria Virginia by the name of Z-Phi Dynasty. Not only did we get to perform in arenas in front of thousands of people in the Tri-State Area, we won countless shows and are known for being the very first step team to win B.E.T.'s StepOff Challenge. </p>
            <iframe id='step' width='420' height='300' src='https://www.youtube.com/embed/sW8PQT-uhbw' frameBorder='0' allowFullScreen></iframe>
          </div>
          <div className='sauls'>
@@ -35,14 +35,14 @@ class AboutMe extends Component {
            </p>
          </div>
          <div className='oncue'>
-           <p className='homeP'>Currently, I am in a Hip-Hop Dance team called OnCue Dance.  We performed at the St Pete Pride Parade in 2014, multiple Music Videos, as well as other shows across Tampa. So as you can see the all of the arts are definitely part of my being.</p>
+           <p className='homeP'>Currently, I am in a Hip-Hop Dance team called OnCue Dance.  We performed at the St Pete Pride Parade in 2014, multiple Music Videos, as well as other shows across Tampa. So as you can see... Performing and Visual Arts are definitely part of my being.</p>
            <img id='oncue' src='./images/oncue.JPG' height='300' width='400' />
          </div>
          <div className='tiy'>
           <a href='https://www.theironyard.com/'>
           <img id='tiy' src='/images/tiy.jpeg' height='300' width='300'/>
           </a>
-           <p className='homeP'> As a recent graduate of the Iron Yard I am now able to show my creativity everyday using Web Development and Graphic Designing. The knowledge that I have obtained during my cohort was amazing.  Web Designing is so fun and challenging all at once. I'm always eager to make something beautiful from a blank page.</p>
+           <p className='homeP'> As a recent Front End Engineering graduate of the Iron Yard, I am now able to show my creativity everyday using Web Development and Graphic Designing. The knowledge that I have obtained during my cohort was amazing.  Web Designing is so fun and challenging all at once. I'm always eager to make something beautiful from a blank page.</p>
          </div>
        </main>
       <Footer />
