@@ -9,7 +9,7 @@ class Contact extends Component {
     return <div className='Contact'>
       <Header/>
       <div className='Headshot'>
-        <img id='headshot' src='./images/Headshot.jpg' height='400' width='275' />
+        <img id='headshot' src={require('../images/Headshot.jpg')} height='400' width='275' />
           <div className='contactMe'>
             <h3 id='Contact'> Contact Me </h3>
             <a className='contactButton' href='./images/TJResume.pdf'>VIEW RESUME</a>

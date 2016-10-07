@@ -12,13 +12,13 @@ class Portfolio extends Component {
       <div className='webDesign'>
         <h3>Web Design</h3>
         <Link to='/Web'>
-          <img id='web' src='./images/marvel.png' height='250' width='400' />
+          <img id='web' src={require('../images/marvel.png')} height='250' width='400' />
         </Link>
       </div>
       <div className='graphicDesign'>
       <h3>Graphic Design</h3>
       <Link to='/Graphic'>
-        <img id='graphic' src='./images/tv.png' height='250' width='400' />
+        <img id='graphic' src={require('../images/tv.png')} height='250' width='400' />
       </Link>
       </div>
     </div>

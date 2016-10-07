@@ -36,11 +36,11 @@ class AboutMe extends Component {
          </div>
          <div className='oncue'>
            <p className='homeP'>Currently, I am in a Hip-Hop Dance team called OnCue Dance.  We performed at the St Pete Pride Parade in 2014, multiple Music Videos, as well as other shows across Tampa. So as you can see... Performing and Visual Arts are definitely part of my being.</p>
-           <img id='oncue' src='./images/oncue.JPG' height='300' width='400' />
+           <img id='oncue' src={require('../images/oncue.jpg')} height='300' width='400' />
          </div>
          <div className='tiy'>
           <a href='https://www.theironyard.com/'>
-          <img id='tiy' src='/images/tiy.jpeg' height='300' width='300'/>
+          <img id='tiy' src={require('../images/tiy.jpeg')} height='300' width='300'/>
           </a>
            <p className='homeP'> As a recent Front End Engineering graduate of the Iron Yard, I am now able to show my creativity everyday using Web Development and Graphic Designing. The knowledge that I have obtained during my cohort was amazing.  Web Designing is so fun and challenging all at once. I'm always eager to make something beautiful from a blank page.</p>
          </div>
