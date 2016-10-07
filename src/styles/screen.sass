@@ -37,6 +37,12 @@ $primary-color: rgba(50, 76, 251, 0.89)
 @mixin borderColor
   border: 3px solid grey
 
+@mixin rowz
+  display: flex
+  flex-direction: row wrap
+  justify-content: space-between
+  margin-bottom: 100px
+
 body
   color: black
   overflow-x: hidden
@@ -110,6 +116,7 @@ nav
   top: 0
   position: fixed
   margin-left: -10px
+  height: 150px
   width: 100vw
   background-color: rgba(2, 4, 17, 0.25)
   margin-bottom: 50px
@@ -117,7 +124,7 @@ nav
   animation-name: comeInTop
   animation-duration: 5s
   justify-content: center
-  padding: 5px
+  padding-top: 35px
   position: absolute
   ul
     display: flex
@@ -143,9 +150,11 @@ nav
 .home
   display: flex
   flex-direction: row
-  animation-name: fadeIn
+  // animation-name: fadeIn
+  margin-top: 150px
+  justify-content: center
+  width: 75vw
   justify-content: space-between
-  margin-top: 100px
 
 .homeMain
   width: 500px
@@ -182,13 +191,12 @@ nav
   margin-right: -150px
 
 //Portfolio
-
 .Portfolio
   display: flex
   flex-wrap: wrap
-  margin-left: 150px
-  margin-right: 150px
-  margin-top: 50px
+  margin-left: 125px
+  margin-right: 125px
+  margin-top: 100px
   justify-content: center
   text-align: center
   justify-content: space-between
@@ -207,7 +215,7 @@ nav
 #graphic:hover
   @include borderColor
 
-
+//WEB PAGE
 .image1
   text-decoration: none
 
@@ -250,6 +258,7 @@ nav
 #headshot
   @include borderColor
   margin-top: 100px
+  box-shadow: 3px 3px 10px black
 
 #Contact
   margin-top: -50px
@@ -265,6 +274,7 @@ nav
   @include borderColor
   justify-content: center
   align-items: center
+  box-shadow: 3px 3px 10px black
 
 .contactButton
   border: 2px solid grey
@@ -276,7 +286,7 @@ nav
   padding-bottom: -20px
   padding-top: 15px
   margin-bottom: 20px
-  // justify-content: center
+  box-shadow: 3px 3px 10px black
   align-content: center
   width: 150px
   height: 30px
@@ -357,10 +367,118 @@ nav
   justify-content: space-between
   margin-bottom: 10px
 
+
+//ABOUT ME
 .AboutMe
   font-family: $base-font-family
   font-weight: bold
-   color: rgb(18, 20, 22)
+  font-size: 16px
+  line-height: 24px
+  color: rgb(18, 20, 22)
+  margin-top: 75px
+
+.homeA
+  height: 30vh
+  width: 40vw
+
+
+.homeP
+  height: 30vh
+  width: 40vw
+
+.newHaven
+  @include rowz
+
+.coop
+  @include rowz
+
+.uncw
+  @include rowz
+
+.step
+  @include rowz
+
+.sauls
+  @include rowz
+
+.oncue
+  @include rowz
+
+#newHaven
+  @include borderColor
+
+#coop
+  @include borderColor
+
+#uncw
+  @include borderColor
+
+#step
+  @include borderColor
+
+#sauls
+  @include borderColor
+
+#oncue
+  @include borderColor
+
+#footer
+  height: 100px
+  width: 100vw
+  background-color: grey
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-right: 10vw
+
+.footerFont
+  padding: 0
+  margin: 0
+  font-size: 30px
+
+.buttons
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 50%
+  align-content: center
+  padding-right: -10vw
+
+.linkedIn
+  height: 50px
+  width: 50px
+  background-image: url('/images/linkedIn.png')
+  background-size: contain
+
+.twitter
+  height: 50px
+  width: 50px
+  background-image: url('/images/twitter.png')
+  background-size: cover
+
+.instagram
+  height: 44px
+  width: 45px
+  background-image: url('/images/instagram.png')
+  background-size: cover
+
+.github
+  height: 50px
+  width: 50px
+  background-image: url('/images/github.png')
+  background-size: cover
+
+#copyRight
+  display: flex
+  align-self: stretch
+  align-items: center
+  padding-left: 15vw
+
+.copyright
+  height: 50px
+  width: 50px
+  background-image: url('/images/copyright.png')
+  background-size: cover
 
 // .popeye:hover
 //   opacity: 0.7

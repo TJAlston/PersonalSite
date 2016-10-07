@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 import { Link } from 'react-router'
 
 class Portfolio extends Component {
@@ -21,6 +22,7 @@ class Portfolio extends Component {
       </Link>
       </div>
     </div>
+    <Footer />
    </div>
   }
 }

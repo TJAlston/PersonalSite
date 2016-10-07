@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 import { Link } from 'react-router'
 
 class Contact extends Component {
@@ -17,6 +18,7 @@ class Contact extends Component {
             <p><a href='https://github.com/TJAlston'>GITHUB: GITHUB.COM/TJAlston</a></p>
           </div>
         </div>
+        <Footer />
       </div>
   }
 }

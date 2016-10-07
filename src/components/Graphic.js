@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 import { Link } from 'react-router'
 
 class Graphic extends Component {
@@ -39,6 +40,7 @@ class Graphic extends Component {
         </div>
       </div>
     </div>
+    <Footer />
   </div>
   }
 }
