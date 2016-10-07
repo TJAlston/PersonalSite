@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { Link } from 'react-router'
 
 class Graphic extends Component {
 
@@ -21,7 +20,7 @@ class Graphic extends Component {
         </div>
         <div className='Row2'>
           <div id='lefemme'>
-            <h3>3D Graphic Example</h3>
+            <h3>3D Graphics</h3>
             <img className='lefemme' src='./images/lefemme.png' height='400' width='300' />
           </div>
           <div id='zeta'>
