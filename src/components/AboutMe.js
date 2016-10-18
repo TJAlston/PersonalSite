@@ -14,7 +14,7 @@ class AboutMe extends Component {
            <p className='homeA'> Born and raised in New Haven Connecticut, home to Yale University and known as the "Cultural Capital of Connecticut". I've always been exposed to the arts when growing up. During my childhood, I was always either in photography, video, dance, drawing, painting, choir or theatre. </p>
          </div>
          <div className='coop'>
-           <p className='homeP'> In June of 2000, I graduated from Cooperative Arts and Humanities High School at that time it was the only full-time arts High School in Connecticut.  I graduated as a Visual Arts major with a concentration in Video and Photography.  During that time I was Secretary of the Senior Class, Editor in Cheif of our class Yearbook and Tresurer of the Recycling Club.  I was also inducted into the National Art Honor Society that same year. </p>
+           <p className='homeP'> In June of 2000, I graduated from Cooperative Arts and Humanities High School at that time it was the only full-time arts High School in Connecticut.  I graduated as a Visual Arts major with a concentration in Video and Photography.  During that time I was Secretary of the Senior Class, Editor in Cheif of our class Yearbook and Treasurer of the Recycling Club.  I was also inducted into the National Art Honor Society that same year. </p>
            <a href='http://co-opartsandhumanities.org/'>
            <img id='coop' src='http://news.yale.edu/sites/default/files/ydb-images/8102-32332916.jpg' height='300' width='300' />
            </a>
@@ -23,7 +23,7 @@ class AboutMe extends Component {
           <a href='http://uncw.edu/'>
           <img id='uncw' src='https://its-go-time.com/wp-content/uploads/2015/02/UNCW_Primary_WhiteBgrnd.jpg' height='300' width='300' />
           </a>
-          <p className='homeA'> In June 2004, I received a Bachelor of Arts Degree in Communication & Media Studies as well as a minor in Theater at the University of North Carolina at Wilmington. During that time I had a plethora of achievements. With four other sorors we reactivated the Pi Nu Chapter of Zeta Phi Beta Sorority Incorporated which is still currently active. I also worked on the student television channel Studio 124 as a Technical Director and Set Designer. I also graduated with the honor of being on the Dean's List my last two consecutive years.</p>
+          <p className='homeA'> In June 2004, I received a Bachelor of Arts Degree in Communication & Media Studies as well as a minor in Theater at the University of North Carolina at Wilmington. During that time I had a plethora of achievements. With four other sorors we reactivated the Pi Nu Chapter of Zeta Phi Beta Sorority Incorporated which is still currently active. I also worked on the student television channel Studio 124 as a Technical Director and Set Designer and I graduated with the honor of being on the Dean's List my last two consecutive years.</p>
          </div>
          <div className='step'>
            <p className='homeP'> One of the proudest moments of my life was joining a competitive Step Team in Alexandria Virginia by the name of Z-Phi Dynasty. Not only did we get to perform in arenas in front of thousands of people in the Tri-State Area, we won countless shows and are known for being the very first step team to win B.E.T.'s StepOff Challenge. </p>
