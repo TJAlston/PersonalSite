@@ -43,6 +43,20 @@ $primary-color: rgba(50, 76, 251, 0.89)
   justify-content: space-between
   margin-bottom: 100px
 
+@mixin columnz
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-bottom: 20px
+
+@mixin columnv
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
+  align-items: center
+  margin-bottom: 20px
+
 body
   color: black
   overflow-x: hidden
@@ -174,7 +188,6 @@ nav
   margin-top: 100px
   justify-content: center
   align-self: center
-  width: 90%
 
 .homeMain
   width: 500px
@@ -212,16 +225,7 @@ nav
   justify-content: center
 
 //Media Queries - HOME
-// @media (min-width:300px) and (max-width:450px)
-//
-//
-// @media (min-width:451px) and (max-width:540px)
-//
-//
-// @media (min-width:541px) and (max-width:759px)
-
-
-@media (min-width:750px) and (max-width:960px)
+@media (min-width:749px) and (max-width:960px)
   .home
     width: 75%
     display: flex
@@ -315,7 +319,7 @@ nav
 //Contact
 .Headshot
   display: flex
-  flex-direction: row wrap
+  flex-direction: row
   margin-left: 150px
   margin-right: 150px
   justify-content: space-between
@@ -359,42 +363,13 @@ nav
   height: 30px
 
 //Media Queries - CONTACT
-@media (min-width:360px) and (max-width:515px)
-.Contact
-  margin-top: 125px
-.contactMe
-  width: 90%
-.Headshot
-  display: flex
-  flex-direction: column-reverse
-  justify-content: center
-  align-items: center
-  width: 100%
-  margin: 0
-//
-// @media (min-width:516px) and (max-width:702px)
-//   .Contact
-//     margin-top: 125px
-//   .contactMe
-//     width: 400px
-//     margin-bottom: -20px
-//   .Headshot
-//     display: flex
-//     flex-direction: column wrap
-//     justify-content: center
-//     align-items: center
-//     width: 50%
-//
-@media (min-width:703px) and (max-width:834px)
-  .contactMe
-    width: 80%
-    margin-left: 20px
+@media (min-width:360px) and (max-width:705px)
+  .Contact
+    margin-top: 125px
   .Headshot
     display: flex
-    flex-direction: column wrap
-    justify-content: center
+    flex-direction: column-reverse
     align-items: center
-    width: 100%
 
 //GRAPHIC DESIGN
 
@@ -524,6 +499,7 @@ nav
   height: 30vh
   line-height: 24px
   width: 40vw
+  text-align: justify
 
 .newHaven
   @include rowz
@@ -580,14 +556,81 @@ nav
 #tiy
   @include borderColor
 
+//Media Queries - ABOUT ME
+@media (min-width:320px) and (max-width:699px)
+  .about
+    margin-top: 200px
+  .newHaven
+    @include columnz
+    margin-bottom: 200px
+  .coop
+    @include columnv
+    margin-bottom: 100px
+  .uncw
+    @include columnz
+    margin-top: 300px
+    margin-bottom: 100px
+  .step
+    @include columnv
+    margin-top: 400px
+    margin-bottom: 200px
+  .sauls
+    @include columnz
+    margin-bottom: 100px
+  .oncue
+    @include columnv
+    margin-top: 400px
+    margin-bottom: 100px
+  .tiy
+    @include columnz
+    margin-bottom: 200px
+  .homeA
+    margin-top: 20px
+    width: 300px
+  .homeP
+    margin-top: 20px
+    width: 300px
+
+@media (min-width:700px) and (max-width:960px)
+  .newHaven
+    @include columnz
+  .coop
+    @include columnv
+  .uncw
+    @include columnz
+    margin-top: 100px
+  .step
+    @include columnv
+    margin-top: 100px
+  .sauls
+    @include columnz
+  .oncue
+    @include columnv
+    margin-top: 100px
+  .tiy
+    @include columnz
+  .homeA
+    margin-top: 20px
+    width: 500px
+  .homeP
+    margin-top: 20px
+    width: 500px
+
 //FOOTER
 #footer
-  width: 100%
   display: flex
   flex-direction: row
   align-items: center
 
 .footerFont
+  padding: 0
+  margin: 0
+  font-size: 40px
+  text-shadow: 2px 0 0.5px black
+  text-decoration: none
+  width: 200px
+
+.footerFontcp
   padding: 0
   margin: 0
   font-size: 40px
@@ -602,8 +645,8 @@ nav
 .button
   display: flex
   flex-direction: row
-  align-content: center
   justify-content: space-between
+  width: 400px
   margin-left: 50px
 
 .linkedIn
@@ -634,7 +677,7 @@ nav
   display: flex
   flex-direction: row
   align-items: center
-  padding-left: 15vw
+  padding-left: 5vw
 
 .copyright
   height: 50px
@@ -643,14 +686,56 @@ nav
   background-size: cover
 
 // Media Queries - FOOTER
-@media (min-width:360px) and (max-width:800px)
-  #footer
-    display: flex
-    flex-direction: row
+@media (min-width:300px) and (max-width:500px)
   .buttons
     display: flex
     flex-direction: column
     align-items: center
+  .footerFont
+    font-size: 40px
+    position: absolute
+  .footerFontcp
+    font-size: 25px
+    justify-content: center
+  #copyRight
+    padding: 0
+    margin-top: 200px
+    align-content: center
+    justify-content: center
+    align-self: center
+    display: flex
+    flex-direction: row
+  .copyright
+    position: relative
+  .button
+    display: flex
+    flex-direction: column
+    margin-top: 100px
+    height: 200px
+    column-count: 2
+  .twitter
+    height: 100px
+    width: 100px
+  .linkedIn
+    height: 100px
+    width: 100px
+  .instagram
+    height: 100px
+    width: 100px
+  .github
+    height: 100px
+    width: 100px
+
+@media (min-width:501px) and (max-width:960px)
+  #footer
+    display: flex
+    width: 80%
+    justify-content: center
+  .buttons
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: center
     height: 150px
     width: 90%
   .footerFont
@@ -675,8 +760,6 @@ nav
   .button
     margin-top: 100px
     height: 200px
-    column-count: 2
-    align-content: space-between
   .twitter
     height: 100px
     width: 100px
