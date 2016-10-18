@@ -7,7 +7,7 @@ class AboutMe extends Component {
   render () {
     return <div className='AboutMe'>
     <Header />
-        <main>
+        <main className='about'>
         <h2>About Me</h2>
         <div className='newHaven'>
           <img id='newHaven' src='http://i49.tinypic.com/2rz5746.jpg' height='300' width='300' />

@@ -8,24 +8,24 @@ class Footer extends Component {
       <main id='footer'>
         <div className='buttons'>
           <h3 className='footerFont'>Follow Me:</h3>
-            <a href='https://www.linkedin.com/in/tamekajalston'>
-            <div className='linkedIn' />
-            </a>
-            <a href='https://twitter.com/Mirage_Music'>
-            <div className='twitter' />
-            </a>
-            <a href='https://www.instagram.com/tamekaj.alston/'>
-            <div className='instagram' />
-            </a>
-            <a href='https://github.com/TJAlston'>
-            <div className='github' />
-            </a>
-        </div>
-          <Link to='/Contact'>
-            <div id='copyRight'>
-              <div className='copyright' />
-              <h3 className='footerFont'> Tameka J. Alston</h3>
+            <div className='button'>
+              <a href='https://www.linkedin.com/in/tamekajalston'>
+              <div className='linkedIn' />
+              </a>
+              <a href='https://twitter.com/Mirage_Music'>
+              <div className='twitter' />
+              </a>
+              <a href='https://www.instagram.com/tamekaj.alston/'>
+              <div className='instagram' />
+              </a>
+              <a href='https://github.com/TJAlston'>
+              <div className='github' />
+              </a>
             </div>
+        </div>
+          <Link id='copyRight' to='/Contact'>
+            <div className='copyright' />
+            <h3 className='footerFontcp'> Tameka J. Alston</h3>
           </Link>
       </main>
     </div>

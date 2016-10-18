@@ -11,7 +11,7 @@ class App extends Component {
       <main className='home'>
       <div className='homeDisplay'>
         <h3 className='homeFont'>Web Designer</h3>
-            <p className='homeMain'> Thank you for taking the time to view my page.  I am a Web Designer and Developer that has experience working with HTML, CSS, Javascript. I am also a recent graduate of The Iron Yard with a certification in Front-End Engineering.</p>
+            <p className='homeMain'> Thank you for taking the time to view my page.  I am a Web Designer and Developer that has experience working with HTML, CSS and Javascript. I am also a recent graduate of The Iron Yard with a certification in Front-End Engineering.</p>
             </div>
             <div className='HS1' />
         </main>

@@ -46,6 +46,7 @@ $primary-color: rgba(50, 76, 251, 0.89)
 body
   color: black
   overflow-x: hidden
+  margin: 0
 
 main
   display: flex
@@ -114,10 +115,8 @@ nav
   display: flex
   flex-wrap: wrap
   top: 0
-  position: fixed
-  margin-left: -10px
   height: 150px
-  width: 100vw
+  width: 100%
   background-color: rgba(2, 4, 17, 0.25)
   margin-bottom: 50px
   border-bottom: 3px solid grey
@@ -129,7 +128,7 @@ nav
   ul
     display: flex
     flex-wrap: wrap
-    width: 90vw
+    width: 90%
     padding-right: 5vw
     justify-content: center
     align-self: center
@@ -146,14 +145,36 @@ nav
 .noUnders
   text-decoration: none
 
+//Media Queries - NAV
+
+@media (min-width:300px) and (max-width:702px)
+  nav
+    display: flex
+    flex-wrap: wrap
+    height: 270px
+    width: 100%
+    position: absolute
+  .ul
+    width: 50%
+    padding-top: -20px
+
+@media (min-width:703px) and (max-width:834px)
+  nav
+    display: flex
+    flex-wrap: wrap
+    height: 160px
+    width: 100%
+    position: absolute
+
 //HOME
+
 .home
   display: flex
   flex-direction: row
   margin-top: 100px
   justify-content: center
-  width: 75vw
-  justify-content: space-between
+  align-self: center
+  width: 90%
 
 .homeMain
   width: 500px
@@ -168,7 +189,7 @@ nav
 
 .homeFont
   font-size: 90px
-  margin-bottom: -20px
+  margin-bottom: -5px
   padding: 0
 
 .HS1
@@ -177,8 +198,8 @@ nav
   background-position: center
   height: 400px
   width: 250px
-  margin-left: -20px
   box-shadow: 3px 3px 10px black
+  margin-left: 120px
   @include borderColor
 
 .homeDisplay
@@ -189,16 +210,57 @@ nav
   padding-top: -10px
   text-align: center
   justify-content: center
-  margin-right: -150px
+
+//Media Queries - HOME
+// @media (min-width:300px) and (max-width:450px)
+//
+//
+// @media (min-width:451px) and (max-width:540px)
+//
+//
+// @media (min-width:541px) and (max-width:759px)
+
+
+@media (min-width:750px) and (max-width:960px)
+  .home
+    width: 75%
+    display: flex
+    flex-direction: column-reverse
+    justify-content: center
+    flex-wrap: wrap
+    padding-top: 20px
+  .homeDisplay
+    width: 100%
+    margin-top: 20px
+    display: flex
+    justify-content: center
+    align-content: center
+  .HS1
+    width: 400px
+    height: 550px
+    display: flex
+    justify-content: center
+  .homeFont
+    width: 100%
+  .homeMain
+    width: 100%
+    height: 100%
+  #footer
+    width: 50%
+  .buttons
+    margin-left: -50px
+  #copyRight
+    margin-left: -60px
 
 //Portfolio
 .Portfolio
   display: flex
   flex-wrap: wrap
-  margin-left: 125px
-  margin-right: 125px
+  margin-left: 100px
+  margin-right: 100px
   margin-top: 100px
   justify-content: center
+  align-self: center
   text-align: center
   justify-content: space-between
   font-family: $font-stack
@@ -206,15 +268,19 @@ nav
 
 #web
   @include borderColor
-
-#web:hover
-  background-color: rgba(11, 94, 153, .5)
+  height: 250px
+  width: 400px
 
 #graphic
   @include borderColor
+  height: 250px
+  width: 400px
 
-#graphic:hover
-  @include borderColor
+//Media Queries - PORTFOLIO
+@media (min-width:760px) and (max-width:960px)
+  .Portfolio
+    display: flex
+    justify-content: center
 
 //WEB PAGE
 .image1
@@ -292,6 +358,44 @@ nav
   width: 150px
   height: 30px
 
+//Media Queries - CONTACT
+@media (min-width:360px) and (max-width:515px)
+.Contact
+  margin-top: 125px
+.contactMe
+  width: 90%
+.Headshot
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
+  align-items: center
+  width: 100%
+  margin: 0
+//
+// @media (min-width:516px) and (max-width:702px)
+//   .Contact
+//     margin-top: 125px
+//   .contactMe
+//     width: 400px
+//     margin-bottom: -20px
+//   .Headshot
+//     display: flex
+//     flex-direction: column wrap
+//     justify-content: center
+//     align-items: center
+//     width: 50%
+//
+@media (min-width:703px) and (max-width:834px)
+  .contactMe
+    width: 80%
+    margin-left: 20px
+  .Headshot
+    display: flex
+    flex-direction: column wrap
+    justify-content: center
+    align-items: center
+    width: 100%
+
 //GRAPHIC DESIGN
 
 .graphics
@@ -368,13 +472,41 @@ nav
   justify-content: space-between
   margin-bottom: 10px
 
+//Media Queries - GRAPHIC DESIGN
+@media (min-width:320px) and (max-width:960px)
+  .Row1
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 10px
+  .Row2
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 10px
+  .Row3
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 10px
+  #footer
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+  .buttons
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
 
 //ABOUT ME
+
 .AboutMe
   font-family: $base-font-family
   font-weight: bold
   font-size: 16px
-  line-height: 24px
   color: rgb(18, 20, 22)
   margin-top: 75px
 
@@ -383,16 +515,19 @@ nav
   margin: 0
   height: 30vh
   width: 40vw
+  line-height: 24px
   text-align: justify
 
 .homeP
   padding: 0
   margin: 0
   height: 30vh
+  line-height: 24px
   width: 40vw
 
 .newHaven
   @include rowz
+  margin-top: 25px
 
 .coop
   @include rowz
@@ -447,27 +582,29 @@ nav
 
 //FOOTER
 #footer
-  width: 100vw
+  width: 100%
   display: flex
   flex-direction: row
   align-items: center
-  margin-right: 20vw
-  padding-bottom: 40px
 
 .footerFont
   padding: 0
   margin: 0
-  font-size: 30px
+  font-size: 40px
   text-shadow: 2px 0 0.5px black
   text-decoration: none
 
 .buttons
   display: flex
   flex-direction: row
-  justify-content: space-between
-  width: 50%
   align-content: center
-  padding-right: -10vw
+
+.button
+  display: flex
+  flex-direction: row
+  align-content: center
+  justify-content: space-between
+  margin-left: 50px
 
 .linkedIn
   height: 50px
@@ -495,7 +632,7 @@ nav
 
 #copyRight
   display: flex
-  align-self: stretch
+  flex-direction: row
   align-items: center
   padding-left: 15vw
 
@@ -505,6 +642,53 @@ nav
   background-image: url('../images/copyright.png')
   background-size: cover
 
+// Media Queries - FOOTER
+@media (min-width:360px) and (max-width:800px)
+  #footer
+    display: flex
+    flex-direction: row
+  .buttons
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 150px
+    width: 90%
+  .footerFont
+    font-size: 40px
+    position: absolute
+  .footerFontcp
+    font-size: 45px
+    justify-content: center
+  #copyRight
+    width: 80vw
+    padding: 0
+    margin-top: 200px
+    align-content: center
+    margin-left: -50px
+    padding-left: 0
+    justify-content: center
+    align-self: center
+    display: flex
+    flex-direction: row
+  .copyright
+    position: relative
+  .button
+    margin-top: 100px
+    height: 200px
+    column-count: 2
+    align-content: space-between
+  .twitter
+    height: 100px
+    width: 100px
+  .linkedIn
+    height: 100px
+    width: 100px
+  .instagram
+    height: 100px
+    width: 100px
+  .github
+    height: 100px
+    width: 100px
 // .popeye:hover
 //   opacity: 0.7
 // @keyframes bounceInDown
