@@ -35,7 +35,7 @@ class AboutMe extends Component {
            </p>
          </div>
          <div className='oncue'>
-           <p className='homeP'>Currently, I am in a Hip-Hop Dance team called OnCue Dance.  We performed at the St Pete Pride Parade in 2014, multiple Music Videos, as well as other shows across Tampa. So as you can see... Performing and Visual Arts are definitely part of my being.</p>
+           <p className='homeP'>Currently, I am in a Hip-Hop Dance team called OnCue Dance as an Elite Dancer.  We performed at the St Pete Pride Parade in 2014, multiple Music Videos, as well as other shows across Tampa. So as you can see... Performing and Visual Arts are definitely part of my being.</p>
            <img id='oncue' src={require('../images/oncue.jpg')} height='300' width='400' />
          </div>
          <div className='tiy'>
