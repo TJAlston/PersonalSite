@@ -31,7 +31,7 @@ class AboutMe extends Component {
          </div>
          <div className='sauls'>
           <img id='sauls' src='https://s-media-cache-ak0.pinimg.com/236x/0c/a1/2c/0ca12cd076ff05ae4de6eaaaccadbd75.jpg' height='400' width='300' />
-           <p className='homeA'> After moving to Florida, I became involved with the Tampa Independent Film and Theater Scene.  I worked with Award Winning Director Tony Stinyard in multiple Films and Theater Shows for AMS Productions as an Assistant Director, Production Manager, Stage Manager and Actress.  AMS is most well-known for Sauls Juke Joint, it is an award winning Theatrical Dance Musical and a local Tampa favorite which is Written, Directed and Produced by Tony Stinyard, Music Written by Grammy Award Winning Music Director Desmond Boone, Sr.
+           <p className='homeA'> After moving to Florida, I became involved with the Tampa Independent Film and Theater Scene.  I worked with Award Winning Director Tony Stinyard in multiple Films and Theater Shows for AMS Productions as an Assistant Director, Production Manager, Stage Manager and Actress.  AMS Productions is most well-known for Sauls Juke Joint, it is an award winning Theatrical Dance Musical and a local Tampa favorite which is Written, Directed and Produced by Tony Stinyard, Music Written by Grammy Award Winning Music Director Desmond Boone, Sr.
            </p>
          </div>
          <div className='oncue'>

@@ -402,6 +402,19 @@ nav
     padding-top: 50px
 
 //WEB PAGE
+
+.Web
+  display: flex
+  flex-wrap: wrap
+  margin-left: 150px
+  margin-right: 100px
+  margin-top: 100px
+  justify-content: center
+  align-self: center
+  text-align: center
+  justify-content: space-between
+  font-family: $font-stack
+
 .image1
   text-decoration: none
 
@@ -413,6 +426,46 @@ nav
 
 .image4
   text-decoration: none
+
+.container
+  display: flex
+  justify-content: center
+  flex-direction: column
+  background-color: #fff
+  border: 2px solid #000
+  align-items: center
+  padding: 50px
+  border-radius: 5px
+  width: 80vw
+  max-width: 500px
+  transform: translate(-50%, -600%)
+  transition: transform 1s ease-out
+  transition: transform 1s ease-in
+  position: fixed
+
+.modal
+
+.modal:before
+  content: ""
+  position: fixed
+  display: none
+  background-color: rgba(0,0,0,.8)
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+
+.modal:target .container
+  transform: translate(-50%,0)
+  position: relative
+  top: 20%
+
+.modal:target:before
+  display: block
+  position: fixed
+
+#modal-close
+
 
 .marvel
   @include borderColor
@@ -429,7 +482,6 @@ nav
 .op
   @include borderColor
   margin-top: -25px
-
 
 //Contact
 .Headshot
