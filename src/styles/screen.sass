@@ -1,4 +1,4 @@
-// @mixin linx ($link, $visit, $hover, $active)
+@mixin linx ($link, $visit, $hover, $active)
 $base-font-family: 'Syncopate', sans-serif
 $secondary-font-family: 'Yellowtail', cursive
 $font-stack: 'Exo', sans-serif
@@ -385,19 +385,16 @@ nav
 //Media Queries - PORTFOLIO
 @media (min-width:320px) and (max-width:700px)
   .Portfolio
-    display: flex
     justify-content: center
     margin-top: 200px
 
 @media (min-width:701px) and (max-width:759px)
   .Portfolio
-    display: flex
     justify-content: center
-    margin-top: 250px
+    margin-top: 100px
 
 @media (min-width:760px) and (max-width:960px)
   .Portfolio
-    display: flex
     justify-content: center
     padding-top: 50px
 
@@ -414,6 +411,17 @@ nav
   text-align: center
   justify-content: space-between
   font-family: $font-stack
+  height: 90vh
+  // max-height: 1000px
+//
+// .Web:target .modal
+//   display: flex
+//   flex: none
+//
+// .Web:before
+//   display: flex
+//   position: fixed
+
 
 .image1
   text-decoration: none
@@ -437,35 +445,51 @@ nav
   padding: 50px
   border-radius: 5px
   width: 80vw
-  max-width: 500px
+  max-width: 600px
   transform: translate(-50%, -600%)
-  transition: transform 1s ease-out
   transition: transform 1s ease-in
   position: fixed
 
-.modal
+.container2
+  display: flex
+  justify-content: center
+  flex-direction: column
+  background-color: #fff
+  border: 2px solid #000
+  align-items: center
+  padding: 50px
+  border-radius: 5px
+  width: 80vw
+  max-width: 600px
+  transform: translate(-50%, -700%)
+  transition: transform 1s ease-out
+  transition: transform 1s ease-in
 
-.modal:before
-  content: ""
-  position: fixed
-  display: none
-  background-color: rgba(0,0,0,.8)
-  top: 0
-  left: 0
-  height: 100%
-  width: 100%
-
-.modal:target .container
-  transform: translate(-50%,0)
-  position: relative
-  top: 20%
-
-.modal:target:before
-  display: block
-  position: fixed
-
-#modal-close
-
+// .modal
+//
+// .modal:before
+//   content: ""
+//   position: fixed
+//   display: none
+//   background-color: rgba(0,0,0,.8)
+//   top: 0
+//   left: 0
+//   height: 100%
+//   width: 100%
+//
+// .modal:target .container
+//   transform: translate(-50%,0)
+//   position: relative
+//   top: 20%
+//
+// .modal:target .container2
+//   transform: translate(-50%,0)
+//   position: relative
+//   left: 60%
+//
+// .modal:target:before
+//   display: block
+//   position: fixed
 
 .marvel
   @include borderColor
@@ -938,23 +962,21 @@ nav
     display: flex
     flex-direction: column
     justify-content: center
-    margin-top: -100px
+    margin-top: -300px
   .footerFont
     font-size: 40px
     width: 100%
   .footerFontcp
     font-size: 25px
-    justify-content: center
-    align-self: center
-    width: 100%
+    width: 400px
   #copyRight
     padding: 0
-    margin-top: 150px
+    margin-top: 100px
     display: flex
     flex-direction: row
   .copyright
-    position: relative
-    padding-right: 10px
+    padding-right: 25px
+    margin-right: 15px
   .button
     display: flex
     flex-direction: column
@@ -964,20 +986,20 @@ nav
     width: 100%
     column-count: 2
   .twitter
-    height: 100px
-    width: 100px
+    height: 75px
+    width: 75px
     margin-bottom: 20px
   .linkedIn
-    height: 100px
-    width: 100px
+    height: 75px
+    width: 75px
     margin-bottom: 20px
   .instagram
-    height: 100px
-    width: 100px
+    height: 72px
+    width: 72px
     margin-bottom: 20px
   .github
-    height: 100px
-    width: 100px
+    height: 75px
+    width: 75px
 
 @media (min-width:706px) and (max-width:960px)
   #footer
@@ -989,7 +1011,7 @@ nav
     flex-direction: column
     align-items: center
     align-content: center
-    height: 150px
+    height: 100px
     justify-content: space-between
     width: 100%
   .footerFont
@@ -1016,20 +1038,20 @@ nav
     height: 200px
     margin-left: -5vw
   .twitter
-    height: 100px
-    width: 100px
+    height: 80px
+    width: 80px
     margin-right: 25px
   .linkedIn
-    height: 100px
-    width: 100px
+    height: 80px
+    width: 80px
     margin-right: 25px
   .instagram
-    height: 100px
-    width: 100px
+    height: 80px
+    width: 80px
     margin-right: 25px
   .github
-    height: 100px
-    width: 100px
+    height: 80px
+    width: 80px
 // .popeye:hover
 //   opacity: 0.7
 // @keyframes bounceInDown
